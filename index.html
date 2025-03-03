@@ -50,5 +50,87 @@
         </form>
     </div>
 </nav>
+
+	<div class="row">
+        <div class="col">
+        <h1 style="text-align: center; background-color:#fcc404; border-radius: 5px; width: 650px;">Quick fare guide</h1>
+        <img src="mrt 3.jpg" style="border: #fcc404; border-radius: 5px; width: 650px; height: 650px;">
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="col-3">
+        <form style="background-color: #6a6aff; width: 450px; border-radius: 5px;">
+            <br>
+            <br>
+            <label>Choose your seat:</label>
+        <select class="form-select" id="seat" style="background-color:#6a6aff; color:white;">
+        <option value="10900">Exclusive</option>
+        <option value="7250">Lower Box</option>
+        <option value="5300">Upper box</option>
+        <option value="1950">General Admission</option>
+        </select>
+        <br>
+        <br>
+        </form>
+        <br>
+        <br>
+        <br>
+            <form style="background-color:#6a6aff; width: 450px; border-radius: 5px;">
+                <br>
+                <br>
+        <label>Choose a type:</label>
+        <select class="form-select" id="discount" style="background-color:  #6a6aff; color:white;">
+        <option value="0.3">PWD/SC/STUDENT</option>
+        <option value="0">Regular</option>
+        </select>
+        <br>
+        <br>
+        </form>
+        <br>
+        <br>
+        <img src="mrt 3 line.jpg" style="align-items: center; width: 450px;">
+        </div>
+
+
+
+
+    <br>
+    <div class="col">
+    <h1  style="background-color:  green; border-radius: 5px; width: 650px; text-align: center; height: 650px; display: flex; align-items: center; justify-content: center; font-size:100px;" id="price">Price will show here :3</h1>
+     <button type="button"  class="btn btn-success" onclick="check_discount()" style="color: white;">The price of your ticket</button>
+     <br>
+    </div>
+        </form>
+    </div>
+    </div>
+    
+    <br>
+    <br>
+    <br>
+</div>
+
+<script>
+     function check(){
+                    window.alert('Submitted');
+        
+                }
+        
+                function check_discount(){
+                    var seat1 = document.getElementById ('seat').value;
+                    var disc1 = document.getElementById ('discount').value;
+                    var final_rate = seat1 - (disc1 * seat1);
+
+                    document.getElementById('price').innerHTML= '₱'+ final_rate 
+                }
+
+                function print(){
+                    window.alert('A copy of the ticket has been sent in your email! Enjoy the concert!');
+        
+                }
+</script>
 </body>
 </html>
