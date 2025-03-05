@@ -62,6 +62,17 @@
         </div>
 
         <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col">
+        <h1 style="text-align: center; background-color:#fcc404; border-radius: 5px; width: 650px;">Quick fare guide</h1>
+        <img src="mrt 3.jpg" style="border: #fcc404; border-radius: 5px; width: 650px; height: 650px;">
+        </div>
+
+        <br>
         <br>
         <br>
         <br>
@@ -112,11 +123,12 @@
         <br>
         <form style="background-color:#6a6aff; width: 450px; border-radius: 5px;">
             <br>
-    <label>Choose a type:</label>
-    <select class="form-select" id="senior" style="background-color:  #6a6aff; color:white;">
-        <option value="0">Normal</option>
-        <option value="0.20">Senior, PWDS, Student</option>
-        </select>
+            <label>Choose a type:</label>
+            <select class="form-select" id="senior" style="background-color:  #6a6aff; color:white;">
+                <option value="0">Normal</option>
+                <option value="0.20">Senior, PWDS, Student</option>
+                <br>
+                </select>
         <br>
         </form>
         <br>
@@ -129,8 +141,9 @@
 
     <br>
     <div class="col">
-    <h1  style="background-color:  green; border-radius: 5px; width: 650px; text-align: center; height: 650px; display: flex; align-items: center; justify-content: center; font-size:100px;" id="price">Price will show here :3</h1>
+    <h1  style="background-color:  green; border-radius: 5px; width: 650px; text-align: center; height: 650px; display: flex; align-items: center; justify-content: center; font-size:100px;" id="price"> </h1>
      <button type="button" class="btn btn-success" onclick="check_price()" style="color: white;">The price of your ticket</button>
+     <button type="button" class="btn btn-success" onclick="check_discount()" style="color: white;">The price of your ticket (discounted)</button>
      <br>
     </div>
         </form>
@@ -146,15 +159,25 @@
         
                 function check_price(){
                     var tick1 = document.getElementById ('ticket').value;
-                    var disc1 = document.getElementById ('discount').value;
+                    var disc1 = document.getElementById ('discount').value; 
+                    var final_rate1 = tick1 ^ disc1;
+                    document.getElementById('price').innerHTML= '₱'+ final_rate1
+                }
+
+                function check_discount(){
+                    var tick2 = document.getElementById ('ticket').value;
+                    var disc2 = document.getElementById ('discount').value;
                     var sen1 = document.getElementById ('senior').value;
-                    var final_rate = (disc1 ^ tick1) ^ sen1;
-                    document.getElementById('price').innerHTML= '₱'+ final_rate
+                    var final_rate2 = tick2 ^ disc2 - 2.6 ;
+                    document.getElementById('price').innerHTML= '₱'+ final_rate2
                 }
 
             
 
           
 </script>
-</body>
+
+
+</body> <!--And yes its really messy and bad, but at least we get a grade!!!! -->
+</html>
 </html>
